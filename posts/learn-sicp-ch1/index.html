@@ -1,0 +1,58 @@
+<!doctype html><html lang=zh-Hans><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><title>SICP 学习笔记 (Chapter 1)</title><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel=stylesheet><link rel=stylesheet href=/css/main.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/han-css@3/dist/han.min.css></head><body a=auto><main class=page-content aria-label=Content><div class=w><a href=/>..</a><article><p class=post-meta><time datetime="2021-06-25 16:17:44 +0800 +0800">2021-06-25</time></p><h1>SICP 学习笔记 (Chapter 1)</h1><h1 id=第一章-构造过程抽象>第一章 构造过程抽象</h1><h2 id=11-程序设计的基本元素>1.1 程序设计的基本元素</h2><p>关注语言的三个机制：</p><ul><li><strong>基本表达形式</strong>，用于表示语言所关心的最简单的个体。</li><li><strong>组合的方法</strong>，通过它们可以从较简单的东西出发构造出复合的元素。</li><li><strong>抽象的方法</strong>，通过它们可以为复合对象明明，并将它们当作单元去操作。</li></ul><p>操作处理的要素：过程和数据（二者并非严格分离）。</p><h3 id=111-表达式>1.1.1 表达式</h3><h3 id=112-命名与环境>1.1.2 命名与环境</h3><h4 id=命名>命名</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>define </span>pi <span style=color:#ae81ff>3.1415926</span>)
+</span></span></code></pre></div><p>命名是一种最初步的抽象。</p><blockquote><p>这种特征鼓励人们采用递增的方式去开发和调试程序。</p></blockquote><h3 id=113-组合式的求值>1.1.3 组合式的求值</h3><blockquote><p>求值过程是递归的。</p></blockquote><p><code>define</code> 一类的求值规则例外成为特殊形式。</p><h3 id=114-复合过程>1.1.4 复合过程</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>square</span> x) (* x x))
+</span></span></code></pre></div><p>过程体可以是一系列的表达式，解释器对其进行顺序求值，返回最后一个表达式的值。</p><h3 id=115-过程应用的代换模型>1.1.5 过程应用的代换模型</h3><ul><li>代换的作用只是帮助理解，并不是对解释器实际工作方式的具体描述。</li><li>代换模型是最简单（仅指理解，非指数学定义）的理解模型，后面将会讨论更复杂的过程应用耐磨性。</li></ul><h3 id=116-条件表达式和谓词>1.1.6 条件表达式和谓词</h3><p>解释器认为一切非 <code>#f</code> 的值均为真。本书中使用 <code>true</code> 和 <code>false</code> 代替 <code>#t</code> 和 <code>#f</code>。</p><h4 id=cond-特殊形式><code>cond</code> 特殊形式</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>cond </span>(<span style=color:#a6e22e>&lt;p_1&gt;</span> &lt;e_1&gt;)
+</span></span><span style=display:flex><span>      (<span style=color:#a6e22e>&lt;p_2&gt;</span> &lt;e_2&gt;)
+</span></span><span style=display:flex><span>      <span style=color:#f92672>...</span>
+</span></span><span style=display:flex><span>      (<span style=color:#a6e22e>&lt;p_n&gt;</span> &lt;e_n&gt;)
+</span></span><span style=display:flex><span>      (<span style=color:#66d9ef>else </span>&lt;e&gt;))
+</span></span></code></pre></div><p>其中每个 <i>&lt;e></i> 表达式都可以是表达式序列。</p><h4 id=if-特殊形式><code>if</code> 特殊形式</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>if </span>&lt;predicate&gt; &lt;consequent&gt; &lt;alternative&gt;)
+</span></span></code></pre></div><p>其中 <i>&lt;consequent></i> 和 <i>&lt;alternative></i> 都只能是单个表达式。</p><h4 id=逻辑复合运算符>逻辑复合运算符</h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>and </span>&lt;e_1&gt; <span style=color:#f92672>...</span> &lt;e_n&gt;)
+</span></span></code></pre></div><p>按顺序求值，若求得假则返回假，否则返回最后一个表达式的值。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>or </span>&lt;e_1&gt; <span style=color:#f92672>...</span> &lt;e_n&gt;)
+</span></span></code></pre></div><p>按顺序求值，返回第一个为真的值，否则返回假。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(not &lt;e&gt;)
+</span></span></code></pre></div><p>逻辑非。</p><p><strong>注意：<code>and</code> 和 <code>or</code> 都是特殊形式（因为它们的子表达式不一定都求值），<code>not</code> 则是一个普通的过程。</strong></p><h3 id=117-实例采用牛顿法求平方根>1.1.7 实例：采用牛顿法求平方根</h3><p>// 这一节开头提到的“说明性描述”和“行动性描述”的区别很有意思。</p><h3 id=118-过程作为黑箱抽象>1.1.8 过程作为黑箱抽象</h3><p>我们可以将一个问题分解成若干个子问题，每个子问题由一个<em>过程</em>来解决。当我们使用这个过程时，不关注它的实现细节，只关注它具备的功能，也就是说这些过程更应该被称为过程的抽象，也就是<em>过程抽象</em>。</p><h2 id=练习>练习</h2><h3 id=练习-11>练习 1.1</h3><pre tabindex=0><code>10
+12
+8
+3
+6
+
+
+19
+#f
+4
+16
+6
+16
+</code></pre><h3 id=练习-12>练习 1.2</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(/ 
+</span></span><span style=display:flex><span>  (+ <span style=color:#ae81ff>5</span> 
+</span></span><span style=display:flex><span>    <span style=color:#ae81ff>4</span> 
+</span></span><span style=display:flex><span>    (- <span style=color:#ae81ff>2</span> 
+</span></span><span style=display:flex><span>      (- <span style=color:#ae81ff>3</span> 
+</span></span><span style=display:flex><span>        (+ <span style=color:#ae81ff>6</span> (/ <span style=color:#ae81ff>4</span> <span style=color:#ae81ff>5</span>))))) 
+</span></span><span style=display:flex><span>  (* <span style=color:#ae81ff>3</span> (- <span style=color:#ae81ff>6</span> <span style=color:#ae81ff>2</span>) (- <span style=color:#ae81ff>2</span> <span style=color:#ae81ff>7</span>)))
+</span></span></code></pre></div><h3 id=练习-13>练习 1.3</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>sum-of-largest-two</span> a b c)
+</span></span><span style=display:flex><span>  (<span style=color:#66d9ef>cond </span>
+</span></span><span style=display:flex><span>    ((<span style=color:#66d9ef>and </span>(&lt; a b) (&lt; b c)) 
+</span></span><span style=display:flex><span>      (+ b c))
+</span></span><span style=display:flex><span>    ((<span style=color:#66d9ef>and </span>(&gt; a b) (&gt; b c)) 
+</span></span><span style=display:flex><span>      (+ a b))
+</span></span><span style=display:flex><span>    ((<span style=color:#66d9ef>and </span>(&gt; a b) (&lt; b c)) 
+</span></span><span style=display:flex><span>      (+ a c))
+</span></span><span style=display:flex><span>    (<span style=color:#66d9ef>else </span>
+</span></span><span style=display:flex><span>      (<span style=color:#66d9ef>if </span>(&gt; a c)
+</span></span><span style=display:flex><span>        (+ a b)
+</span></span><span style=display:flex><span>        (+ b c)))))
+</span></span></code></pre></div><h3 id=练习-14>练习 1.4</h3><p>返回 <code>a</code> 加 <code>b</code> 的绝对值之和。</p><h3 id=练习-15>练习 1.5</h3><p>若是应用序则将无限循环求值 <code>(test 0 (p))</code>，若是正则序则可以求得结果 <code>0</code>。</p><h3 id=练习-16>练习 1.6</h3><p>对于 <code>new-if</code> 函数，在调用时会将其三个参数分别求值后代入（应用序），而 <code>if</code> 特殊形式只会<strong>先</strong>求出 <code>predicate</code> 的值，<strong>然后</strong>根据其 truthiness 对两个子句<strong>之一</strong>求值。</p><p>所以 Eva 的过程会陷入无限循环。</p><h3 id=练习-17>练习 1.7</h3><p>对于极小的数，预先设定的误差值 <code>0.0001</code> 显然过小，可能会在逼近确切值之前就停止；
+对于极大的数，因为计算机中的浮点数有精度限制，有可能在<code> guess</code> 的值达到精度内所能表示的最接近的值时误差依然大于 <code>0.0001</code>，从而使程序无法停止。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>good-enough?</span> guess x)
+</span></span><span style=display:flex><span>  (= (<span style=color:#a6e22e>improve</span> guess x) x))
+</span></span></code></pre></div><h3 id=练习-18>练习 1.8</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-scheme data-lang=scheme><span style=display:flex><span>(<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>cubic-root-iter</span> guess x)
+</span></span><span style=display:flex><span>  (<span style=color:#66d9ef>if </span>(<span style=color:#a6e22e>good-enough?</span> guess x)
+</span></span><span style=display:flex><span>    guess
+</span></span><span style=display:flex><span>    (<span style=color:#a6e22e>cubic-root-iter</span> (<span style=color:#a6e22e>improve</span> guess x)
+</span></span><span style=display:flex><span>                     x)))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>(<span style=color:#66d9ef>define </span>(<span style=color:#a6e22e>improve</span> guess x)
+</span></span><span style=display:flex><span>  (/ (+ (/ x
+</span></span><span style=display:flex><span>           (<span style=color:#a6e22e>square</span> guess))
+</span></span><span style=display:flex><span>        (* <span style=color:#ae81ff>2</span> guess))
+</span></span><span style=display:flex><span>     <span style=color:#ae81ff>3</span>))
+</span></span></code></pre></div></article></div></main></body></html>

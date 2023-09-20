@@ -1,0 +1,6 @@
+article.songti {
+  font-family: Georgia, 'Source Han Serif SC', 'Noto Serif SC', -apple-system, 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+}
+[lang*=Hans], [lang=zh-CN], article strong:lang(zh-CN), article strong:lang(zh-Hans), html:lang(zh-CN), html:lang(zh-Hans) {
+  font-family: "Noto Serif SC", "Biaodian Pro Sans GB","Helvetica Neue",Helvetica,Arial,"Han Heiti GB",sans-serif;
+}
