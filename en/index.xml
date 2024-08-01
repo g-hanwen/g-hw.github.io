@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hanwen Guo</title><link>https://hanwen.me/en/</link><description>Recent content on Hanwen Guo</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>g.hanwen@outlook.com (Hanwen Guo)</managingEditor><webMaster>g.hanwen@outlook.com (Hanwen Guo)</webMaster><lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hanwen.me/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Gödel's β Function</title><link>https://hanwen.me/en/posts/godel_s_%CE%B2_function/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/posts/godel_s_%CE%B2_function/</guid><description>&lt;p>Today in the &lt;em>Introduction to Recursion Theory&lt;/em> course I was told about Gödel&amp;rsquo;s β Function, which makes it possible to encode a finite sequence into a single natural number.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hanwen Guo</title><link>https://hanwen.io/en/</link><description>Recent content on Hanwen Guo</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>g.hanwen@outlook.com (Hanwen Guo)</managingEditor><webMaster>g.hanwen@outlook.com (Hanwen Guo)</webMaster><lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://hanwen.io/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Gödel's β Function</title><link>https://hanwen.io/en/posts/godel_s_%CE%B2_function/</link><pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/posts/godel_s_%CE%B2_function/</guid><description>&lt;p>Today in the &lt;em>Introduction to Recursion Theory&lt;/em> course I was told about Gödel&amp;rsquo;s β Function, which makes it possible to encode a finite sequence into a single natural number.&lt;/p>
 &lt;h2 id="the-definition">The definition&lt;/h2>
 &lt;p>Before the function it self, there are some auxiliary functions that need to be defined.&lt;/p>
 &lt;p>First we come up with the quotient and remainder functions.
@@ -33,7 +33,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>What conditions should the value of \(\textrm{L}(m)\) satisfy? First, it must make \(d_i = 1 + (i + 1) \cdot \textrm{L}(m) &amp;gt; m_i\), which is one of the conditions asked by Chinese Remainder Theorem. Second, it makes those \(d_i\)&amp;rsquo;s pairwise coprime. To prove propositions like &amp;rsquo;there is &lt;em>no&lt;/em> prime \(p\) such that \(p \mid d_i\) and \(p \mid d_j\) for different \(i, j &amp;lt;n\)&amp;rsquo;, consider proof by contradiction. Think about what if there is some prime \(p\) such that \(p \mid d_i\) and \(p \mid d_j\) for different \(i, j &amp;lt;n\), i.e. \(p \mid 1 + (i + 1) \cdot \textrm{L} (m)\) and \(p \mid 1 + (j + 1) \cdot \textrm{L} (m)\). Assume \(i &amp;lt; j\) without loss of generality, we have \(p \mid (j - i) \cdot \textrm{L}(m)\). It will be good if we have \(p \mid \textrm{L}(m)\), which would lead to the contradiction that \(p \mid 1\). So things become evident: find a construction of \(\textrm{L}(m)\) such that \((j - i) \mid \textrm{L}(m)\). This can be achived by making \(\textrm{L}(m)\) divisible by the product of all the possible values of \(j - i\), which ranges from \(1\) to \(n - 1\). This is to say, making \((n-1)! \mid \textrm{L}(m)\) would be a good idea. With the first condition that \(\textrm{L}(m)\) should satisfy, it suffices to take \(\textrm{L}(m) = l!\), where \(l = \max\{n, m_0, \dots, m_{n - 1}\}\). I take \(n\) instead of \(n - 1\) there for better elegance with the same effect.&lt;/p>
 &lt;p>The above is not a strictly stated proof, however it is easy to rewrite it into one.&lt;/p>
 &lt;h2 id="mumbles--again">Mumbles (Again)&lt;/h2>
-&lt;p>The reason I write this post is not that the ability of Gödel&amp;rsquo;s β Function to encode a finite sequence into a number is amazing (there are many other techniques to achive this, e.g. encode the sequence into the exponents of an initial segment of primes), nor that the proof is elegant (though it is). It is just because I recalled the confusion that those two preliminary propositions caused to me, and realized that they seems easy for me now, and can be used to prove such lemmas. This feels strange, so I decided to write it down.&lt;/p></description></item><item><title>目中无人</title><link>https://hanwen.me/en/poems/%E7%9B%AE%E4%B8%AD%E6%97%A0%E4%BA%BA/</link><pubDate>Mon, 04 Sep 2023 22:22:47 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E7%9B%AE%E4%B8%AD%E6%97%A0%E4%BA%BA/</guid><description>&lt;p>抱歉。四年或者五年前&lt;/p>
+&lt;p>The reason I write this post is not that the ability of Gödel&amp;rsquo;s β Function to encode a finite sequence into a number is amazing (there are many other techniques to achive this, e.g. encode the sequence into the exponents of an initial segment of primes), nor that the proof is elegant (though it is). It is just because I recalled the confusion that those two preliminary propositions caused to me, and realized that they seems easy for me now, and can be used to prove such lemmas. This feels strange, so I decided to write it down.&lt;/p></description></item><item><title>目中无人</title><link>https://hanwen.io/en/poems/%E7%9B%AE%E4%B8%AD%E6%97%A0%E4%BA%BA/</link><pubDate>Mon, 04 Sep 2023 22:22:47 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E7%9B%AE%E4%B8%AD%E6%97%A0%E4%BA%BA/</guid><description>&lt;p>抱歉。四年或者五年前&lt;/p>
 &lt;p>我把你的牙齿埋起来时没有想到，今天&lt;/p>
 &lt;p>轻轻抚摸胸口，这干燥的花朵&lt;/p>
 &lt;p>抓住我的心脏像鸟抓住翅膀；像火车&lt;/p>
@@ -42,7 +42,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>眼前曾经吃下的花朵飞旋&lt;/p>
 &lt;p>你一定想不到。很多年后我们把酒&lt;/p>
 &lt;p>声音碎在杯里，等待醉如同等待&lt;/p>
-&lt;p>一次预谋已久的假释，多么可爱的游戏&lt;/p></description></item><item><title>青梅竹马</title><link>https://hanwen.me/en/poems/%E9%9D%92%E6%A2%85%E7%AB%B9%E9%A9%AC/</link><pubDate>Sun, 19 Mar 2023 18:22:47 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E9%9D%92%E6%A2%85%E7%AB%B9%E9%A9%AC/</guid><description>&lt;p>昨天的梦里我在吸烟&lt;/p>
+&lt;p>一次预谋已久的假释，多么可爱的游戏&lt;/p></description></item><item><title>青梅竹马</title><link>https://hanwen.io/en/poems/%E9%9D%92%E6%A2%85%E7%AB%B9%E9%A9%AC/</link><pubDate>Sun, 19 Mar 2023 18:22:47 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E9%9D%92%E6%A2%85%E7%AB%B9%E9%A9%AC/</guid><description>&lt;p>昨天的梦里我在吸烟&lt;/p>
 &lt;p>一口咬下去&lt;/p>
 &lt;p>甜丝丝的让我的嗓子有点疼&lt;/p>
 &lt;p>你给我卷烟的纸条我弄丢了&lt;/p>
@@ -57,7 +57,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>外面已经有人在哭了还不够吗&lt;/p>
 &lt;br />
 &lt;p>我点点头，想起之前的告别&lt;/p>
-&lt;p>下次你再来，我就不请你吃饭了&lt;/p></description></item><item><title>春，又一则</title><link>https://hanwen.me/en/poems/%E6%98%A5%E5%8F%88%E4%B8%80%E5%88%99/</link><pubDate>Sun, 19 Mar 2023 00:31:07 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E6%98%A5%E5%8F%88%E4%B8%80%E5%88%99/</guid><description>&lt;p>这么多年过去了&lt;/p>
+&lt;p>下次你再来，我就不请你吃饭了&lt;/p></description></item><item><title>春，又一则</title><link>https://hanwen.io/en/poems/%E6%98%A5%E5%8F%88%E4%B8%80%E5%88%99/</link><pubDate>Sun, 19 Mar 2023 00:31:07 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E6%98%A5%E5%8F%88%E4%B8%80%E5%88%99/</guid><description>&lt;p>这么多年过去了&lt;/p>
 &lt;p>你还像从前一样困吗&lt;/p>
 &lt;p>攥着声音在风中慢慢地硬&lt;/p>
 &lt;p>还是说，质地已经不再重要&lt;/p>
@@ -79,7 +79,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>如果能记得，请你吃些水果&lt;/p>
 &lt;p>这个季节有它的好，我们的好&lt;/p>
 &lt;p>也许困的人不会想到被困的人&lt;/p>
-&lt;p>青绿的时候，黄瓜的刺还足够多&lt;/p></description></item><item><title>二重奏，爱情何许人也与符号恋爱</title><link>https://hanwen.me/en/poems/%E4%BA%8C%E9%87%8D%E5%A5%8F%E7%88%B1%E6%83%85%E4%BD%95%E8%AE%B8%E4%BA%BA%E4%B9%9F%E4%B8%8E%E7%AC%A6%E5%8F%B7%E6%81%8B%E7%88%B1/</link><pubDate>Mon, 02 Jan 2023 18:40:19 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E4%BA%8C%E9%87%8D%E5%A5%8F%E7%88%B1%E6%83%85%E4%BD%95%E8%AE%B8%E4%BA%BA%E4%B9%9F%E4%B8%8E%E7%AC%A6%E5%8F%B7%E6%81%8B%E7%88%B1/</guid><description>&lt;div style="display:flex;">
+&lt;p>青绿的时候，黄瓜的刺还足够多&lt;/p></description></item><item><title>二重奏，爱情何许人也与符号恋爱</title><link>https://hanwen.io/en/poems/%E4%BA%8C%E9%87%8D%E5%A5%8F%E7%88%B1%E6%83%85%E4%BD%95%E8%AE%B8%E4%BA%BA%E4%B9%9F%E4%B8%8E%E7%AC%A6%E5%8F%B7%E6%81%8B%E7%88%B1/</link><pubDate>Mon, 02 Jan 2023 18:40:19 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E4%BA%8C%E9%87%8D%E5%A5%8F%E7%88%B1%E6%83%85%E4%BD%95%E8%AE%B8%E4%BA%BA%E4%B9%9F%E4%B8%8E%E7%AC%A6%E5%8F%B7%E6%81%8B%E7%88%B1/</guid><description>&lt;div style="display:flex;">
 &lt;div>
 &lt;p>醒来时，记得草原起风的肚脐&lt;/p>
 &lt;p>昨晚的太阳还柔软。转头，看缓坡上的你&lt;/p>
@@ -106,7 +106,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>面前是银色的流。我们握着彼此&lt;/p>
 &lt;p>力在你小小的椭圆上凝聚&lt;/p>
 &lt;/div>
-&lt;/div></description></item><item><title>雪</title><link>https://hanwen.me/en/poems/%E9%9B%AA/</link><pubDate>Sat, 26 Nov 2022 03:20:00 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E9%9B%AA/</guid><description>&lt;p>咽下时间，你有一个完整坚硬的春天&lt;/p>
+&lt;/div></description></item><item><title>雪</title><link>https://hanwen.io/en/poems/%E9%9B%AA/</link><pubDate>Sat, 26 Nov 2022 03:20:00 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E9%9B%AA/</guid><description>&lt;p>咽下时间，你有一个完整坚硬的春天&lt;/p>
 &lt;p>一口紧绷的湖，红的水有黑的皮&lt;/p>
 &lt;p>灰的脚印，在目光下噼啪碎裂。&lt;/p>
 &lt;p>此刻你呼唤骨，覆尘的牙齿，干燥的眼球&lt;/p>
@@ -116,7 +116,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>佐以一些难以跳动的梦，清淡无味的睡眠&lt;/p>
 &lt;p>你的引擎摩擦沥青和泥土。玻璃在流&lt;/p>
 &lt;p>趁夜晚闭合，一切都还来得及&lt;/p>
-&lt;p>雪的围墙站在白茫茫的土地上&lt;/p></description></item><item><title>便利店之王</title><link>https://hanwen.me/en/poems/%E4%BE%BF%E5%88%A9%E5%BA%97%E4%B9%8B%E7%8E%8B/</link><pubDate>Mon, 24 Oct 2022 23:36:14 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E4%BE%BF%E5%88%A9%E5%BA%97%E4%B9%8B%E7%8E%8B/</guid><description>&lt;p>秋，夜，王趺坐收银台前，篝灯如吠。明灭之际有兽前来采购：鹿角虎爪，云雾缭绕，眼睛碧绿如同玻璃；店中不见生人已久。坐，齿轮捻动，肩胛慢慢松弛，衣袖如瓷。在货架之间，忘记面孔的人有迷失的风险。一份白色，我有天空中游动穿过云的骨。一份蓝色，有雨水溅落金属制品间的空气。绿色，有薄而冰凉至温润的指甲。黑色有窗外随风沙沙的水草。兽狡黠，想必没有红色。王赧然，有常住仓库，深居简出，肥而不腻的三文鱼。颜色，声音，温度，气味，这一切尽可落在你一人身上。但，让我与你的眼睛对饮一杯。所以熬煮越来越粘稠的空气，坛中有清冽，眼前有孤灯，然后让身体舒展沉浮。兽目睹这一切，嘴微张，牙齿柔软，荧光微微。第二天，王尚未醒来，脸上躺着一枚红叶，身体轻轻摇晃。&lt;/p></description></item><item><title>菜市场之梦三首</title><link>https://hanwen.me/en/poems/%E8%8F%9C%E5%B8%82%E5%9C%BA%E4%B9%8B%E6%A2%A6%E4%B8%89%E9%A6%96/</link><pubDate>Tue, 08 Mar 2022 23:59:59 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E8%8F%9C%E5%B8%82%E5%9C%BA%E4%B9%8B%E6%A2%A6%E4%B8%89%E9%A6%96/</guid><description>&lt;h1 id="其一水产区">其一·水产区&lt;/h1>
+&lt;p>雪的围墙站在白茫茫的土地上&lt;/p></description></item><item><title>便利店之王</title><link>https://hanwen.io/en/poems/%E4%BE%BF%E5%88%A9%E5%BA%97%E4%B9%8B%E7%8E%8B/</link><pubDate>Mon, 24 Oct 2022 23:36:14 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E4%BE%BF%E5%88%A9%E5%BA%97%E4%B9%8B%E7%8E%8B/</guid><description>&lt;p>秋，夜，王趺坐收银台前，篝灯如吠。明灭之际有兽前来采购：鹿角虎爪，云雾缭绕，眼睛碧绿如同玻璃；店中不见生人已久。坐，齿轮捻动，肩胛慢慢松弛，衣袖如瓷。在货架之间，忘记面孔的人有迷失的风险。一份白色，我有天空中游动穿过云的骨。一份蓝色，有雨水溅落金属制品间的空气。绿色，有薄而冰凉至温润的指甲。黑色有窗外随风沙沙的水草。兽狡黠，想必没有红色。王赧然，有常住仓库，深居简出，肥而不腻的三文鱼。颜色，声音，温度，气味，这一切尽可落在你一人身上。但，让我与你的眼睛对饮一杯。所以熬煮越来越粘稠的空气，坛中有清冽，眼前有孤灯，然后让身体舒展沉浮。兽目睹这一切，嘴微张，牙齿柔软，荧光微微。第二天，王尚未醒来，脸上躺着一枚红叶，身体轻轻摇晃。&lt;/p></description></item><item><title>菜市场之梦三首</title><link>https://hanwen.io/en/poems/%E8%8F%9C%E5%B8%82%E5%9C%BA%E4%B9%8B%E6%A2%A6%E4%B8%89%E9%A6%96/</link><pubDate>Tue, 08 Mar 2022 23:59:59 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E8%8F%9C%E5%B8%82%E5%9C%BA%E4%B9%8B%E6%A2%A6%E4%B8%89%E9%A6%96/</guid><description>&lt;h1 id="其一水产区">其一·水产区&lt;/h1>
 &lt;p>事情本不应如此：追逐一只&lt;/p>
 &lt;p>病入膏肓，唇齿低垂之燕；&lt;/p>
 &lt;p>其熟视被严格限制的颜色，且&lt;/p>
@@ -150,13 +150,13 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>或者进入纸张和金属，如此种种&lt;/p>
 &lt;p>以两百赫兹的频率转动七十年。悬挂于&lt;/p>
 &lt;p>无叶之桨，红色的螺旋。肉&lt;/p>
-&lt;p>在凝固的空气，不能停止干涸&lt;/p></description></item><item><title>果汁记</title><link>https://hanwen.me/en/poems/%E6%9E%9C%E6%B1%81%E8%AE%B0/</link><pubDate>Thu, 03 Mar 2022 18:52:31 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E6%9E%9C%E6%B1%81%E8%AE%B0/</guid><description>&lt;p>抱着淡绿色的天空，头发&lt;/p>
+&lt;p>在凝固的空气，不能停止干涸&lt;/p></description></item><item><title>果汁记</title><link>https://hanwen.io/en/poems/%E6%9E%9C%E6%B1%81%E8%AE%B0/</link><pubDate>Thu, 03 Mar 2022 18:52:31 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E6%9E%9C%E6%B1%81%E8%AE%B0/</guid><description>&lt;p>抱着淡绿色的天空，头发&lt;/p>
 &lt;p>就开始缓慢地生长，触手约零至六摄氏度&lt;/p>
 &lt;p>质地无虞。水果的心情是重要的&lt;/p>
 &lt;p>生产预报称有七级复合原料预警；&lt;/p>
 &lt;p>浓缩防护性命攸关——颜色是重要的。&lt;/p>
 &lt;p>灰鸟应当为白色湖水的口感而睡眠&lt;/p>
-&lt;p>摇摇之际，对草原百听不厌&lt;/p></description></item><item><title>有思分裂</title><link>https://hanwen.me/en/poems/%E6%9C%89%E6%80%9D%E5%88%86%E8%A3%82/</link><pubDate>Sun, 12 Dec 2021 18:52:42 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E6%9C%89%E6%80%9D%E5%88%86%E8%A3%82/</guid><description>&lt;p>你的一些分子式徒然沉默于血脑屏障之外&lt;/p>
+&lt;p>摇摇之际，对草原百听不厌&lt;/p></description></item><item><title>有思分裂</title><link>https://hanwen.io/en/poems/%E6%9C%89%E6%80%9D%E5%88%86%E8%A3%82/</link><pubDate>Sun, 12 Dec 2021 18:52:42 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E6%9C%89%E6%80%9D%E5%88%86%E8%A3%82/</guid><description>&lt;p>你的一些分子式徒然沉默于血脑屏障之外&lt;/p>
 &lt;p>一些乖，一些不为人承认的悲哀的国度&lt;/p>
 &lt;p>不为人所触碰的血液循环之中心集散&lt;/p>
 &lt;p>于是枪油流淌。罪淹溺于泪、污垢和暖流&lt;/p>
@@ -176,7 +176,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>石砖失手忘记某人&lt;/p>
 &lt;p>纸、手、木弥散之必要。人造&lt;/p>
 &lt;p>玫瑰自弃雄蕊——田园将芜&lt;/p>
-&lt;p>胡不葬西西弗斯于月海之秋&lt;/p></description></item><item><title>青铜太阳</title><link>https://hanwen.me/en/poems/%E9%9D%92%E9%93%9C%E5%A4%AA%E9%98%B3/</link><pubDate>Thu, 19 Aug 2021 18:52:49 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E9%9D%92%E9%93%9C%E5%A4%AA%E9%98%B3/</guid><description>&lt;p>你不曾听见春天被夏季扼死&lt;/p>
+&lt;p>胡不葬西西弗斯于月海之秋&lt;/p></description></item><item><title>青铜太阳</title><link>https://hanwen.io/en/poems/%E9%9D%92%E9%93%9C%E5%A4%AA%E9%98%B3/</link><pubDate>Thu, 19 Aug 2021 18:52:49 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E9%9D%92%E9%93%9C%E5%A4%AA%E9%98%B3/</guid><description>&lt;p>你不曾听见春天被夏季扼死&lt;/p>
 &lt;p>像日光通过削波器落下，呼啸失真&lt;/p>
 &lt;p>晒干的言语失去粘腻&lt;/p>
 &lt;p>肉体的边缘刺痛之余愈加锋锐&lt;/p>
@@ -199,7 +199,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>黑色的烟尘下云正在干涸。你不知道&lt;/p>
 &lt;p>不可生长树木的土地之宿命&lt;/p>
 &lt;p>无力偿还的诗人该当何罪？&lt;/p>
-&lt;p>八月的夜里，青铜的神明冉冉升起&lt;/p></description></item><item><title>蓝色</title><link>https://hanwen.me/en/poems/%E8%93%9D%E8%89%B2/</link><pubDate>Thu, 29 Jul 2021 18:52:56 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E8%93%9D%E8%89%B2/</guid><description>&lt;p>胶片振翅飞过铜绿的江面&lt;/p>
+&lt;p>八月的夜里，青铜的神明冉冉升起&lt;/p></description></item><item><title>蓝色</title><link>https://hanwen.io/en/poems/%E8%93%9D%E8%89%B2/</link><pubDate>Thu, 29 Jul 2021 18:52:56 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E8%93%9D%E8%89%B2/</guid><description>&lt;p>胶片振翅飞过铜绿的江面&lt;/p>
 &lt;p>这个傍晚，一些树木不再停驻&lt;/p>
 &lt;p>爬行的航空器沉没于苇荡。水花&lt;/p>
 &lt;p>开放在皱的玻璃上，伸长脖颈&lt;/p>
@@ -216,7 +216,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>深海的鱼流动在荒芜的井底&lt;/p>
 &lt;p>空中云的语言动荡&lt;/p>
 &lt;p>洪波涌起。这样的夜里我们低声言语&lt;/p>
-&lt;p>我们不曾看见深蓝色的火。&lt;/p></description></item><item><title>念</title><link>https://hanwen.me/en/poems/%E5%BF%B5/</link><pubDate>Sat, 03 Jul 2021 18:53:00 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E5%BF%B5/</guid><description>&lt;p>万古的夜里，月色&lt;/p>
+&lt;p>我们不曾看见深蓝色的火。&lt;/p></description></item><item><title>念</title><link>https://hanwen.io/en/poems/%E5%BF%B5/</link><pubDate>Sat, 03 Jul 2021 18:53:00 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E5%BF%B5/</guid><description>&lt;p>万古的夜里，月色&lt;/p>
 &lt;p>折断在电波与铁轨的交缝，勾出&lt;/p>
 &lt;p>环形山成枯萎的白，刺人的灰：马赛克&lt;/p>
 &lt;p>铁的边缘，锋利的指涉&lt;/p>
@@ -232,7 +232,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>自砖瓦和混凝土间凸显&lt;/p>
 &lt;br />
 &lt;p>要小心啊。投河者挣扎间轻语&lt;/p>
-&lt;p>这一路远山如夜，一苇难渡&lt;/p></description></item><item><title>我是如此鸣响</title><link>https://hanwen.me/en/poems/%E6%88%91%E6%98%AF%E5%A6%82%E6%AD%A4%E9%B8%A3%E5%93%8D/</link><pubDate>Wed, 19 May 2021 18:53:07 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E6%88%91%E6%98%AF%E5%A6%82%E6%AD%A4%E9%B8%A3%E5%93%8D/</guid><description>&lt;p>春江。红色的金属锁住雨水&lt;/p>
+&lt;p>这一路远山如夜，一苇难渡&lt;/p></description></item><item><title>我是如此鸣响</title><link>https://hanwen.io/en/poems/%E6%88%91%E6%98%AF%E5%A6%82%E6%AD%A4%E9%B8%A3%E5%93%8D/</link><pubDate>Wed, 19 May 2021 18:53:07 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E6%88%91%E6%98%AF%E5%A6%82%E6%AD%A4%E9%B8%A3%E5%93%8D/</guid><description>&lt;p>春江。红色的金属锁住雨水&lt;/p>
 &lt;p>柏油路、道路标线、乳白的车轮溅上泥点&lt;/p>
 &lt;p>栏杆边上江水太凉。钟在摇晃&lt;/p>
 &lt;p>所以一路上我从未想过回望，那钟，那鼓&lt;/p>
@@ -244,7 +244,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>一片扭动的肾，这些丑陋的东西&lt;/p>
 &lt;p>几乎无法负担稻谷，树木和土地&lt;/p>
 &lt;p>钟。鼓。转动的轮胎并不哀伤&lt;/p>
-&lt;p>这曾是风生长的地方，夜幕下我们的城&lt;/p></description></item><item><title>我没有适合下雨天的衣服</title><link>https://hanwen.me/en/poems/%E6%88%91%E6%B2%A1%E6%9C%89%E9%80%82%E5%90%88%E4%B8%8B%E9%9B%A8%E5%A4%A9%E7%9A%84%E8%A1%A3%E6%9C%8D/</link><pubDate>Fri, 07 May 2021 18:53:37 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E6%88%91%E6%B2%A1%E6%9C%89%E9%80%82%E5%90%88%E4%B8%8B%E9%9B%A8%E5%A4%A9%E7%9A%84%E8%A1%A3%E6%9C%8D/</guid><description>&lt;p>我明喻青色的琉璃瓦以天光游走&lt;/p>
+&lt;p>这曾是风生长的地方，夜幕下我们的城&lt;/p></description></item><item><title>我没有适合下雨天的衣服</title><link>https://hanwen.io/en/poems/%E6%88%91%E6%B2%A1%E6%9C%89%E9%80%82%E5%90%88%E4%B8%8B%E9%9B%A8%E5%A4%A9%E7%9A%84%E8%A1%A3%E6%9C%8D/</link><pubDate>Fri, 07 May 2021 18:53:37 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E6%88%91%E6%B2%A1%E6%9C%89%E9%80%82%E5%90%88%E4%B8%8B%E9%9B%A8%E5%A4%A9%E7%9A%84%E8%A1%A3%E6%9C%8D/</guid><description>&lt;p>我明喻青色的琉璃瓦以天光游走&lt;/p>
 &lt;p>空空叩叩&lt;/p>
 &lt;p>大石顺风流向车窗之后&lt;/p>
 &lt;p>竹枝之燃烧并不以风格为准&lt;/p>
@@ -269,7 +269,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>光晕与拿铁走进广场&lt;/p>
 &lt;p>一场大火闪烁塑料桌椅&lt;/p>
 &lt;p>影院的废墟上&lt;/p>
-&lt;p>复生的草原有露水涌现&lt;/p></description></item><item><title>家与家中之家和无家之家</title><link>https://hanwen.me/en/poems/%E5%AE%B6%E4%B8%8E%E5%AE%B6%E4%B8%AD%E4%B9%8B%E5%AE%B6%E5%92%8C%E6%97%A0%E5%AE%B6%E4%B9%8B%E5%AE%B6/</link><pubDate>Fri, 07 May 2021 18:53:21 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E5%AE%B6%E4%B8%8E%E5%AE%B6%E4%B8%AD%E4%B9%8B%E5%AE%B6%E5%92%8C%E6%97%A0%E5%AE%B6%E4%B9%8B%E5%AE%B6/</guid><description>&lt;p>在一切韵律都自吞其尾而亡的第二夜&lt;/p>
+&lt;p>复生的草原有露水涌现&lt;/p></description></item><item><title>家与家中之家和无家之家</title><link>https://hanwen.io/en/poems/%E5%AE%B6%E4%B8%8E%E5%AE%B6%E4%B8%AD%E4%B9%8B%E5%AE%B6%E5%92%8C%E6%97%A0%E5%AE%B6%E4%B9%8B%E5%AE%B6/</link><pubDate>Fri, 07 May 2021 18:53:21 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E5%AE%B6%E4%B8%8E%E5%AE%B6%E4%B8%AD%E4%B9%8B%E5%AE%B6%E5%92%8C%E6%97%A0%E5%AE%B6%E4%B9%8B%E5%AE%B6/</guid><description>&lt;p>在一切韵律都自吞其尾而亡的第二夜&lt;/p>
 &lt;p>蓝色的月亮，直径三十厘米&lt;/p>
 &lt;p>迈着惨白的水泥制电线杆，跌撞&lt;/p>
 &lt;p>在人行横道与道路标线之间&lt;/p>
@@ -301,7 +301,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;br />
  
 月亮。山林。我们的家。露水。
-&lt;p>我多希望它们不是深蓝色的。&lt;/p></description></item><item><title>忏悔者的雕像张开手臂</title><link>https://hanwen.me/en/poems/%E5%BF%8F%E6%82%94%E8%80%85%E7%9A%84%E9%9B%95%E5%83%8F%E5%BC%A0%E5%BC%80%E6%89%8B%E8%87%82/</link><pubDate>Wed, 14 Apr 2021 18:53:51 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E5%BF%8F%E6%82%94%E8%80%85%E7%9A%84%E9%9B%95%E5%83%8F%E5%BC%A0%E5%BC%80%E6%89%8B%E8%87%82/</guid><description>&lt;p>失律。不如归去&lt;/p>
+&lt;p>我多希望它们不是深蓝色的。&lt;/p></description></item><item><title>忏悔者的雕像张开手臂</title><link>https://hanwen.io/en/poems/%E5%BF%8F%E6%82%94%E8%80%85%E7%9A%84%E9%9B%95%E5%83%8F%E5%BC%A0%E5%BC%80%E6%89%8B%E8%87%82/</link><pubDate>Wed, 14 Apr 2021 18:53:51 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E5%BF%8F%E6%82%94%E8%80%85%E7%9A%84%E9%9B%95%E5%83%8F%E5%BC%A0%E5%BC%80%E6%89%8B%E8%87%82/</guid><description>&lt;p>失律。不如归去&lt;/p>
 &lt;p>水汽氤氲的林中，意象&lt;/p>
 &lt;p>扇动它的耳朵。这无关一切颤动、震荡与破碎&lt;/p>
 &lt;p>不过是连绵阴雨沦陷了言语的江山故国&lt;/p>
@@ -325,7 +325,7 @@ for all \(i &amp;lt; n\).&lt;/p>
 &lt;p>两个标点仍然可以拥抱彼此&lt;/p>
 &lt;p>这时文字开始歪斜，段落开始有序&lt;/p>
 &lt;p>它们等待三流诗人的终结，直到最后的&lt;/p>
-&lt;p>失律，然后归去&lt;/p></description></item><item><title>在轰鸣中寂然</title><link>https://hanwen.me/en/poems/%E5%9C%A8%E8%BD%B0%E9%B8%A3%E4%B8%AD%E5%AF%82%E7%84%B6/</link><pubDate>Mon, 01 Feb 2021 17:09:55 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.me/en/poems/%E5%9C%A8%E8%BD%B0%E9%B8%A3%E4%B8%AD%E5%AF%82%E7%84%B6/</guid><description>&lt;p>我很喜欢我们学校的校车。远远地看过去，不大不小的一个，卡其色和浅棕色相间，是很温柔的颜色。等车的时候，总是先听见引擎的轰鸣声由远及近、由小而大，接着就能看见它从拐弯处的树或楼后探出头，到面前稳稳停下，车门再嗤嗤地打开。得益于宿舍楼就在大循环始发站旁的近水楼台之便，我常乘校车。在赶路这方面，我心安理得地做了个懒人。&lt;/p>
+&lt;p>失律，然后归去&lt;/p></description></item><item><title>在轰鸣中寂然</title><link>https://hanwen.io/en/poems/%E5%9C%A8%E8%BD%B0%E9%B8%A3%E4%B8%AD%E5%AF%82%E7%84%B6/</link><pubDate>Mon, 01 Feb 2021 17:09:55 +0800</pubDate><author>g.hanwen@outlook.com (Hanwen Guo)</author><guid>https://hanwen.io/en/poems/%E5%9C%A8%E8%BD%B0%E9%B8%A3%E4%B8%AD%E5%AF%82%E7%84%B6/</guid><description>&lt;p>我很喜欢我们学校的校车。远远地看过去，不大不小的一个，卡其色和浅棕色相间，是很温柔的颜色。等车的时候，总是先听见引擎的轰鸣声由远及近、由小而大，接着就能看见它从拐弯处的树或楼后探出头，到面前稳稳停下，车门再嗤嗤地打开。得益于宿舍楼就在大循环始发站旁的近水楼台之便，我常乘校车。在赶路这方面，我心安理得地做了个懒人。&lt;/p>
 &lt;p>坐校车很有趣。这里说的校车，并非单指车辆，而是指司机、车辆、站点和线路构成的整体的概念。其中有趣之处在于，慢慢地熟悉这一切的过程，像是在与一位朋友渐渐相识相知。坐车的次数多了，我有时会有种错觉，像是突然发觉自己和这名老友原来已经认识了多年。我还记得刚开始坐大循环时的情形：上车前，我先惶恐地问在车旁抽烟的司机师傅，到某处应该坐到哪一站；上车后，再打开手机上的导航软件，放大了仔细盯着自己的位置和要去的位置，又总抬头看前面路旁是否有站牌，唯恐坐过了站。但慢慢地，我也开始摸索出它的脾气。我先是学会了在手机上查站点位置，又认熟了几个常去的站点。记住了线路，也偶尔在上车时发觉“这个师傅我曾见过的”。直到有一天，我想去趟教五楼，随口说了一句“师傅，教五有下”后，转头看到阳光温暖着珞珈广场，一瞬间仿佛时间静止。我惊觉这随口的招呼与窗中的景色，于我而言竟然已是如此熟悉，这种熟悉感却又如此猝不及防。这个下午，我跳下车，第一次觉得自己不再是一个茫然的新生、一个外来者，而是来自一个熟悉的地方的熟悉的人。&lt;/p>
 &lt;p>有时我会坐上大循环，但哪里也不去，为的只是用二十分钟环绕一圈校园。这些日子里，我就要早早地去站牌旁边等着，为的是抢到副驾驶座。校车上位置众多，我最喜欢的便是副驾驶。无他，只因为视野绝佳。在车上看风景是与散步时不同的。白天是这样：无论日光还是树影，都不再是缓缓行于其中时安静而克制的样子，而是飞了起来、唱了起来，从眼前一闪即过。我也不再像散步时一样，尝试感受，尝试融入；我在万物的海洋间乘风破浪。晚上也是这样：走路时，明暗的变化、影子的伸缩，都是缓慢的、暧昧的；在副驾驶座，我所看到的则是一盏又一盏金黄的路灯转瞬迎来又离去，宛如一次次刹那间的日落。我看得见道路在前方空前流顺地弯曲又延伸。车上向来很吵。满车乘客聊天的声音很吵，引擎的巨响也很吵。但坐在车上，看着窗外，我总觉得自己正沉溺在最安静的海底。&lt;/p>
 &lt;p>每天早晨，我睁开眼睛，听得见窗外校车轰隆隆地爬上斜坡；中午去食堂的路上路过站点，也听得到校车熄火又轰然发动的声音；晚上从图书馆回宿舍，我又总是遇到它轰隆隆地迎面驶来。这声音贯穿着我的一天，更贯穿着我生活在这校园中的每一天。不如说，校车对我来说，已经成了时间的具象、具象的时间，轰隆隆地来，轰隆隆地去。我有时和它一起，颠簸着向前；有时我又和它分离，两不相关，各自离开。在学校的日子里，我好像总在从一个地方，到另一个地方：有时是徐步，有时是奔赴。在一些早晨，我会抓来一辆校车跳上去，告诉它：早上好！我们美好的一天从现在开始了。校车不会说话，但打开门的时候总是嗤的一声，如同轻轻笑了一下。而在另一些徐徐而行的下午，我会感到有些累了，就等一辆校车过来，对它说，我不想再走了，请你载我一程吧。校车不会拒绝我，它总会用一路的轰鸣声告诉我，我们还在向前走。&lt;/p>
